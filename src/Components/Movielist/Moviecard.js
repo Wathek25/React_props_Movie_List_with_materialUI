@@ -6,6 +6,7 @@ import Box from "@material-ui/core/Box";
 import propTypes from "prop-types";
 
 const Moviecards = ({ movie }) => {
+  console.log(typeof movie.id);
   return (
     <div>
       <div className="wrapper">
@@ -65,7 +66,7 @@ const Moviecards = ({ movie }) => {
 export default Moviecards;
 // default Props
 Moviecards.defaultProps = {
-  id: "unknown",
+  id: 0,
   image: "blank",
   name: "unknown",
   date: "unknown",
@@ -74,7 +75,7 @@ Moviecards.defaultProps = {
 };
 // proptypes
 Moviecards.propTypes = {
-  id: propTypes.string,
+  id: propTypes.number,
   name: propTypes.string,
   date: propTypes.string,
   type: propTypes.string,
